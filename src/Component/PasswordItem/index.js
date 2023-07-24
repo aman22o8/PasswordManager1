@@ -10,7 +10,7 @@ const PasswordItem = props => {
     <li className="eachitems">
       <h1 className="singleletter">Y</h1>
       <div className="middle_container">
-        <h1 className="heading_website">{website}</h1>
+        <p className="heading_website">{website}</p>
         <p className="heading_username">{username}</p>
         {isActive ? (
           <p className="heading_password">{password}</p>
@@ -23,7 +23,12 @@ const PasswordItem = props => {
         )}
       </div>
       <div className="delete_container">
-        <button onClick={clickingdelete} type="button" className="btn_delete">
+        <button
+          data-testid="delete"
+          onClick={clickingdelete}
+          type="button"
+          className="btn_delete"
+        >
           <img
             className="dlt"
             src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"

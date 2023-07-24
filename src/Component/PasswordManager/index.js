@@ -145,7 +145,7 @@ class PasswordManager extends Component {
         </div>
         <div className="resultcontainer">
           <div className="result_header_container">
-            <p className="count_password">Your Passwords</p>
+            <h1 className="count_password">Your Passwords</h1>
             <p className="span0">{lengthocfarray}</p>
             <div className="allignkro">
               <img
@@ -165,11 +165,14 @@ class PasswordManager extends Component {
           <hr className="horizontal" />
           <div className="checkbox_container">
             <input
+              id="checkmybox"
               value={mycheck}
               onChange={this.checkboxfunction}
               type="checkbox"
             />
-            <p className="checklro">Check password</p>
+            <label htmlFor="checkmybox" className="checklro">
+              Show passwords
+            </label>
           </div>
           {searchedvalues.length !== 0 ? (
             <ul className="listitems_container">
